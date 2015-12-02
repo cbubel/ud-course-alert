@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title UD Course Alert
+    head(profile="http://www.w3.org/2005/10/profile")
+      link(rel="icon" type="image/png" href="/images/favicon1.png")
+    link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    link(rel="stylesheet", href="/stylesheets/toastr.min.css")
+  body(ng-app="app")
+    nav.navbar.navbar-inverse.navbar-fixed-top(style="background-color:#337ab7;")
+      .container
+        .navbar-header
+          button(type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar").navbar-toggle.collapsed
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#' style="color: #FFF") UD Course Alert
+        #navbar.navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href="mailto:cbubel@udel.edu" style="color: #FFF") Contact me
+    block content
+  script(src="/javascripts/jquery.min.js")
+  script(src="/javascripts/angular.min.js")
+  script(src="/javascripts/bootstrap.min.js")
+  script(src="/javascripts/parse.js")
+  script(src="/javascripts/angular/app.js")
+  script(src="/javascripts/angular/controller.js")
+  script(src="/javascripts/toastr.min.js")
+  script(src="/javascripts/jquery.validate.js")
+  script(src="/javascripts/validator.js")

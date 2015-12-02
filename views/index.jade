@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .container(ng-controller="Controller as ctrl")
+    .row
+      .col-md-12
+        h3 Add a Class
+        p Want to be alerted when a seat opens up in a specific class? Enter the class, section, and your email address, and we'll send you an email when a seat opens up!
+        form(id="addCourse" ng-submit="ctrl.submit(session, course, section, email); session = 'spring2016'")
+          .form-group
+            label Session
+            select.form-control(name="session" id="session" ng-model="session" ng-init="session = 'spring2016'")
+              option(value="winter2016") Winter 2016
+              option(value="spring2016" selected="selected") Spring 2016
+          .form-group
+            label Course 
+            input.form-control( type="text" name="course" id="course" ng-model="course" placeholder="Course (ex. CISC275)" maxlength="8")
+          .form-group
+            label Section
+            input.form-control(type="text" name="section" id="section" ng-model="section" placeholder="Section (ex. 010 or 020D)" maxlength="5")
+          .form-group
+            label Email
+            input.form-control(type="email" name="email" id="email" ng-model="email" placeholder="Email")
+          button.form-control.btn.btn-primary(type="submit") Submit
+      
